@@ -16,7 +16,7 @@ jobs:
           path: 'vue/'
 
       - name: Build Docker Image 🐳
-        run: docker build vue/ -t vue:latest
+        run: docker build . -t vue:latest
 
       - name: Remove exist container 🏺
         run: docker rm -f vue
