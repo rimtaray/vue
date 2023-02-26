@@ -19,7 +19,7 @@ jobs:
         run: docker build . -t vue:latest
 
       - name: Remove exist container 🏺
-        run: docker rm -f vue
+        run: docker rm -f backend
 
       - name: Run Docker Container 🏺
         run: docker run -p 3000:3000 --network backend --name backend -d vue:latest
