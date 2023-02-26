@@ -16,10 +16,10 @@ jobs:
         #  path: 'vue/'
 
       - name: Build Docker Image 🐳
-        run: docker build . -t vue:latest
+        run: docker build -f Dockerfile . -t php-main:latest
 
       - name: Remove exist container 🏺
-        run: docker rm -f backend
+        run: docker rm -f php-main
 
       - name: Run Docker Container 🏺
-        run: docker run -p 8080:8080 --network backend --name backend -d vue:latest
+        run: docker run -p 80 --network backend --name php-main -d php-main:latest
