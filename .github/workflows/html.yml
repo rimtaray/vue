@@ -22,4 +22,4 @@ jobs:
         run: docker rm -f html
 
       - name: Run Docker Container 🏺
-        run: docker run -p 8081:80 --network backend --name html -d html:latest
+        run: docker run -p 80 --network backend --name html -d html:latest
