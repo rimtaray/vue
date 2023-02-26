@@ -16,7 +16,7 @@ jobs:
         #  path: 'vue/'
 
       - name: Build Docker Image 🐳
-        run: docker build . -t html:latest
+        run: docker build -f Dockerfile-PHP . -t html:latest
 
       - name: Remove exist container 🏺
         run: docker rm -f html
