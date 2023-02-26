@@ -1,7 +1,4 @@
-FROM httpd:2.4
-
-WORKDIR /usr/local/apache2/htdocs/
-
-COPY ./php/src/. /usr/local/apache2/htdocs/
-
+FROM php:8.0-apache
+WORKDIR /var/www/html
+COPY ./php/src/. .
 EXPOSE 80
